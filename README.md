@@ -4,16 +4,14 @@ This is the script to make backups of app called "Notes" on a Mac
 
 ## Prerequisites
 
-Run
+### Install Dependencies
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install coreutils
 ```
 
-## Make sure you have rsync 3
-
-Run
+### Make sure you have rsync 3
 
 ```
 brew install rsync
@@ -21,8 +19,6 @@ rsync --version
 ```
 
 ## Check logs
-
-Run
 
 ```
 less /Users/${USER}/Downloads/backup_notes.log
