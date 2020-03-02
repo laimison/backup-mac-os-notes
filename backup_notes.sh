@@ -30,4 +30,4 @@ fi
 # Do backup
 # If you have permissions issue because user or group is different on external share use -rltvz, otherwise -vaE 
 /usr/local/bin/gtimeout 180 /usr/local/bin/rsync -rltvz --progress --delete-after "${HOME}/Library/Group Containers/group.com.apple.notes" "${HOME}/Library/Containers/com.apple.Notes" ${MOUNTED_TO}/ 2>&1 | /usr/bin/tee -a /Users/${USER}/Downloads/backup_notes.log
-if [ "$?" == "0" ]; then echo backup completed successfully; else backup failed; fi | /usr/bin/tee -a /Users/${USER}/Downloads/backup_notes.log
+if [ "$?" == "0" ]; then echo "`date` backup completed successfully"; else echo "`date` backup failed"; fi | /usr/bin/tee -a /Users/${USER}/Downloads/backup_notes.log
